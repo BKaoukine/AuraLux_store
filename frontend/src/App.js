@@ -38,7 +38,8 @@ function App() {
 					<Route path='/loging' element={<LoginSignup />} />
 				</Routes>
 			</BrowserRouter>
-		</div>
+
+        </div>
 	);
 }
 

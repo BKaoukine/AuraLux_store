@@ -9,12 +9,12 @@ export const Navbar = () => {
 	return (
 		<div className='flex justify-around p-4 shadow-md'>
             {/* Logo */}
-			<div className='flex items-center gap-2 text-gray-300 text-2xl font-bold'>
+			<div className='flex items-center gap-2 text-[#263238] text-2xl font-bold'>
 				<img src={logo} alt='' />
 				<p>AuraLux</p>
 			</div>
             {/* Menu */}
-			<ul className='flex items-center gap-12 text-[#00008B] text-lg'>
+			<ul className='flex items-center gap-12 text-[#263238] text-lg'>
 				<li
 					className='cursor-pointer flex flex-col items-center justify-center gap-1'
 					onClick={() => {
@@ -91,7 +91,7 @@ export const Navbar = () => {
             {/* Cart and loging */}
 			<div className='flex items-center gap-11'>
 				<Link to='/loging'>
-					<button className='w-36 h-14 outline-none text-[20px] font-light rounded-[75px] border-[1px] border-solid text-[#00008B] bg-white cursor-pointer active:bg-slate-200'>
+					<button className='w-36 h-14 outline-none text-[20px] font-light rounded-[75px] border-[1px] border-solid text-[#263238] bg-white cursor-pointer active:bg-slate-200'>
 						Loging
 					</button>
 				</Link>
