@@ -8,9 +8,9 @@ export const Item = (props) => {
         <h1 className='font-serif font-bold text-xl text-[#263238] '>{props.name}</h1>
            
         <div>
-            <ul>
+            <ul className='flex flex-row space-x-2'>
                 <li className='line-through text-[#b2bec3]'>${props.old_price}</li>
-                <li className='text-[#263238]'>${props.new_price}</li>
+                <li className='text-[#263238] font-black'>${props.new_price}</li>
             </ul>
         </div>
     </div>
