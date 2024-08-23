@@ -6,6 +6,7 @@ import { ShopCategory } from "./pages/ShopCategory";
 import { Product } from "./pages/Product";
 import { LoginSignup } from "./pages/LoginSignup";
 import { Cart } from "./pages/Cart";
+import { Footer } from "./Components/Footer/Footer";
 function App() {
 	return (
 		<div>
@@ -14,29 +15,30 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path='/' element={<Shop />} />
-					<Route path='/rings' element={<ShopCategory />} category='ring' />
+					<Route path='/rings' element={<ShopCategory category='Rings' />}  />
 					<Route
 						path='/necklaces'
-						element={<ShopCategory />}
-						category='Necklace'
+						element={<ShopCategory category='Necklaces' />}
+						
 					/>
 					<Route
 						path='/earrings'
-						element={<ShopCategory />}
-						category='Earring'
+						element={<ShopCategory category='Earrings' />}
+						
 					/>
 					<Route
 						path='/bracelets'
-						element={<ShopCategory />}
-						category='Bracelet'
+						element={<ShopCategory category='Bracelets' />}
+						
 					/>
-					<Route path='/packs' element={<ShopCategory />} category='Pack' />
+					<Route path='/packs' element={<ShopCategory category='Packs' />}  />
 					<Route path='/product' element={<Product />}>
 						<Route path=':productId' element={<Product />} />
 					</Route>
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/loging' element={<LoginSignup />} />
 				</Routes>
+                <Footer/>
 			</BrowserRouter>
 
         </div>
