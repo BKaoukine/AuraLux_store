@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export const Item = (props) => {
   return (
     <div className='flex flex-col w-full gap-2 p-2 border-2 transition ease-in-out delay-150 hover:scale-105'>
-        <img className='w-full h-96' src={props.image} alt="" />
+        <Link to={`/product/${props.id}`}><img className='w-full h-96' src={props.image} alt="" /></Link>
          <hr />
         <h1 className='font-serif font-bold text-xl text-[#263238] '>{props.name}</h1>
            

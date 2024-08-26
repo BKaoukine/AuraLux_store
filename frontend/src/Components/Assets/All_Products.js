@@ -70,7 +70,22 @@ import b10_img from '../Assets/Bracelets/5902505488707339725.jpg';
 import b11_img from '../Assets/Bracelets/5902505488707339729.jpg';
 import b12_img from '../Assets/Bracelets/5902505488707339734.jpg';
 import b13_img from '../Assets/Bracelets/5902505488707339735.jpg';
-
+import p1_img from '../Assets/Elegant Gold Necklace.jpg'
+import p2_img from '../Assets/Silver Stud Earrings.jpg'
+import p3_img from '../Assets/Diamond Ring.jpg'
+import p4_img from '../Assets/Pearl Bracelet.jpg'
+import p5_img from '../Assets/Ruby Pendant.jpg'
+import p6_img from '../Assets/Sapphire Stud Earrings.jpg'
+import p7_img from '../Assets/Emerald Necklace.jpg'
+import p8_img from '../Assets/Opal Ring.webp'
+import c1_img from '../Assets/5877723325545956159.jpg';
+import c2_img from '../Assets/5877508907893638159.jpg';
+import c3_img from '../Assets/5897756955685012469.jpg';
+import c4_img from '../Assets/5897756955685012461.jpg';
+import c5_img from '../Assets/5902505488707339765.jpg';
+import c6_img from '../Assets/5902505488707339774.jpg';
+import c7_img from '../Assets/5915632635340769100.jpg';
+import c8_img from '../Assets/5915632635340769141.jpg';
 
 let All_Products = [
   {
@@ -234,7 +249,7 @@ let All_Products = [
     newPrice: 169.99,
   },
   {
-    id: 1,
+    id: 21,
     category: 'Packs',
     image: pack1,
     name: 'Wedding Set',
@@ -242,7 +257,7 @@ let All_Products = [
     newPrice: 1099.99,
   },
   {
-    id: 2,
+    id: 22,
     category: 'Packs',
     image: pack2,
     name: 'Engagement Set',
@@ -250,7 +265,7 @@ let All_Products = [
     newPrice: 899.99,
   },
   {
-    id: 3,
+    id: 23,
     category: 'Packs',
     image: pack3,
     name: 'Anniversary Set',
@@ -258,7 +273,7 @@ let All_Products = [
     newPrice: 699.99,
   },
   {
-    id: 4,
+    id: 24,
     category: 'Packs',
     image: pack4,
     name: 'Luxury Gift Set',
@@ -266,7 +281,7 @@ let All_Products = [
     newPrice: 1199.99,
   },
   {
-    id: 5,
+    id: 25,
     category: 'Packs',
     image: pack5,
     name: 'Bridal Jewelry Set',
@@ -274,7 +289,7 @@ let All_Products = [
     newPrice: 1399.99,
   },
   {
-    id: 6,
+    id: 26,
     category: 'Packs',
     image: pack6,
     name: 'Diamond Jewelry Set',
@@ -282,7 +297,7 @@ let All_Products = [
     newPrice: 1299.99,
   },
   {
-    id: 7,
+    id: 27,
     category: 'Packs',
     image: pack7,
     name: 'Gold Jewelry Set',
@@ -290,7 +305,7 @@ let All_Products = [
     newPrice: 1099.99,
   },
   {
-    id: 8,
+    id: 28,
     category: 'Packs',
     image: pack8,
     name: 'Silver Jewelry Set',
@@ -298,7 +313,7 @@ let All_Products = [
     newPrice: 799.99,
   },
   {
-    id: 9,
+    id: 29,
     category: 'Packs',
     image: pack9,
     name: 'Gemstone Jewelry Set',
@@ -306,7 +321,7 @@ let All_Products = [
     newPrice: 999.99,
   },
   {
-    id: 10,
+    id: 30,
     category: 'Packs',
     image: pack10,
     name: 'Pearl Jewelry Set',
@@ -314,7 +329,7 @@ let All_Products = [
     newPrice: 699.99,
   },
   {
-    id: 11,
+    id: 31,
     category: 'Packs',
     image: pack11,
     name: 'Holiday Gift Set',
@@ -322,7 +337,7 @@ let All_Products = [
     newPrice: 1199.99,
   },
   {
-    id: 12,
+    id: 32,
     category: 'Packs',
     image: pack12,
     name: 'Classic Jewelry Set',
@@ -330,7 +345,7 @@ let All_Products = [
     newPrice: 799.99,
   },
   {
-    id: 13,
+    id: 33,
     category: 'Packs',
     image: pack13,
     name: 'Modern Jewelry Set',
@@ -338,7 +353,7 @@ let All_Products = [
     newPrice: 1099.99,
   },
   {
-    id: 14,
+    id: 34,
     category: 'Packs',
     image: pack14,
     name: 'Designer Jewelry Set',
@@ -346,7 +361,7 @@ let All_Products = [
     newPrice: 1299.99,
   },
   {
-    id: 15,
+    id: 35,
     category: 'Packs',
     image: pack15,
     name: 'Vintage Jewelry Set',
@@ -354,7 +369,7 @@ let All_Products = [
     newPrice: 699.99,
   },
   {
-    id: 16,
+    id: 36,
     category: 'Packs',
     image: pack16,
     name: 'Custom Jewelry Set',
@@ -362,7 +377,7 @@ let All_Products = [
     newPrice: 899.99,
   },
   {
-    id: 17,
+    id: 37,
     category: 'Packs',
     image: pack17,
     name: 'Eternity Jewelry Set',
@@ -370,7 +385,7 @@ let All_Products = [
     newPrice: 1199.99,
   },
   {
-    id: 18,
+    id: 38,
     category: 'Packs',
     image: pack18,
     name: 'Luxury Wedding Set',
@@ -378,7 +393,7 @@ let All_Products = [
     newPrice: 1399.99,
   },
   {
-    id: 19,
+    id: 39,
     category: 'Packs',
     image: pack19,
     name: 'Elegant Gift Set',
@@ -386,7 +401,7 @@ let All_Products = [
     newPrice: 899.99,
   },
   {
-    id: 20,
+    id: 40,
     category: 'Packs',
     image: pack20,
     name: 'Premium Gift Set',
@@ -394,7 +409,7 @@ let All_Products = [
     newPrice: 1099.99,
   },
   {
-    id: 21,
+    id: 41,
     category: 'Packs',
     image: pack21,
     name: 'Opulent Jewelry Set',
@@ -402,7 +417,7 @@ let All_Products = [
     newPrice: 1199.99,
   },
   {
-    id: 22,
+    id: 42,
     category: 'Packs',
     image: pack22,
     name: 'Exclusive Gift Set',
@@ -410,7 +425,7 @@ let All_Products = [
     newPrice: 1299.99,
   },
   {
-    id: 1,
+    id: 43,
     category: 'Necklaces',
     image: n1_img,
     name: 'Golden Crescent Necklace',
@@ -418,7 +433,7 @@ let All_Products = [
     newPrice: 149.99,
   },
   {
-    id: 2,
+    id: 44,
     category: 'Necklaces',
     image: n2_img,
     name: 'Diamond Halo Pendant',
@@ -426,7 +441,7 @@ let All_Products = [
     newPrice: 249.99,
   },
   {
-    id: 3,
+    id: 45,
     category: 'Necklaces',
     image: n3_img,
     name: 'Sapphire Heart Necklace',
@@ -434,7 +449,7 @@ let All_Products = [
     newPrice: 199.99,
   },
   {
-    id: 4,
+    id: 46,
     category: 'Necklaces',
     image: n4_img,
     name: 'Emerald Teardrop Pendant',
@@ -442,7 +457,7 @@ let All_Products = [
     newPrice: 219.99,
   },
   {
-    id: 5,
+    id: 47,
     category: 'Necklaces',
     image: n5_img,
     name: 'Ruby Infinity Necklace',
@@ -450,7 +465,7 @@ let All_Products = [
     newPrice: 159.99,
   },
   {
-    id: 6,
+    id: 48,
     category: 'Necklaces',
     image: n6_img,
     name: 'Pearl Elegance Necklace',
@@ -458,7 +473,7 @@ let All_Products = [
     newPrice: 129.99,
   },
   {
-    id: 7,
+    id: 49,
     category: 'Necklaces',
     image: n7_img,
     name: 'Opal Star Pendant',
@@ -466,14 +481,14 @@ let All_Products = [
     newPrice: 139.99,
   },
   {
-    id: 1,
+    id: 50,
     image: e1_img,
     name: 'Diamond Hoop Earrings',
     oldPrice: 179.99,
     newPrice: 149.99,
   },
   {
-    id: 2,
+    id: 52,
     category: 'Earrings',
     image: e2_img,
     name: 'Sapphire Drop Earrings',
@@ -481,7 +496,7 @@ let All_Products = [
     newPrice: 129.99,
   },
   {
-    id: 3,
+    id: 53,
     category: 'Earrings',
     image: e3_img,
     name: 'Ruby Stud Earrings',
@@ -489,7 +504,7 @@ let All_Products = [
     newPrice: 79.99,
   },
   {
-    id: 4,
+    id: 54,
     category: 'Earrings',
     image: e4_img,
     name: 'Emerald Cluster Earrings',
@@ -497,7 +512,7 @@ let All_Products = [
     newPrice: 169.99,
   },
   {
-    id: 5,
+    id: 55,
     category: 'Earrings',
     image: e5_img,
     name: 'Pearl Teardrop Earrings',
@@ -505,7 +520,7 @@ let All_Products = [
     newPrice: 99.99,
   },
   {
-    id: 6,
+    id: 56,
     category: 'Earrings',
     image: e6_img,
     name: 'Opal Stud Earrings',
@@ -513,7 +528,7 @@ let All_Products = [
     newPrice: 69.99,
   },
   {
-    id: 7,
+    id: 57,
     category: 'Earrings',
     image: e7_img,
     name: 'Topaz Halo Earrings',
@@ -521,7 +536,7 @@ let All_Products = [
     newPrice: 119.99,
   },
   {
-    id: 8,
+    id: 58,
     category: 'Earrings',
     image: e8_img,
     name: 'Garnet Drop Earrings',
@@ -529,7 +544,7 @@ let All_Products = [
     newPrice: 109.99,
   },
   {
-    id: 9,
+    id: 59,
     category: 'Earrings',
     image: e9_img,
     name: 'Amethyst Hoop Earrings',
@@ -537,7 +552,7 @@ let All_Products = [
     newPrice: 139.99,
   },
   {
-    id: 10,
+    id: 60,
     category: 'Earrings',
     image: e10_img,
     name: 'Citrine Stud Earrings',
@@ -545,7 +560,7 @@ let All_Products = [
     newPrice: 89.99,
   },
   {
-    id: 1,
+    id: 61,
     category: 'Bracelets',
     image: b1_img,
     name: 'Gold Charm Bracelet',
@@ -553,7 +568,7 @@ let All_Products = [
     newPrice: 119.99,
   },
   {
-    id: 2,
+    id: 62,
     category: 'Bracelets',
     image: b2_img,
     name: 'Silver Bangle Bracelet',
@@ -561,7 +576,7 @@ let All_Products = [
     newPrice: 99.99,
   },
   {
-    id: 3,
+    id: 63,
     category: 'Bracelets',
     image: b3_img,
     name: 'Diamond Tennis Bracelet',
@@ -569,7 +584,7 @@ let All_Products = [
     newPrice: 249.99,
   },
   {
-    id: 4,
+    id: 64,
     category: 'Bracelets',
     image: b4_img,
     name: 'Leather Wrap Bracelet',
@@ -577,7 +592,7 @@ let All_Products = [
     newPrice: 59.99,
   },
   {
-    id: 5,
+    id: 65,
     category: 'Bracelets',
     image: b5_img,
     name: 'Rose Gold Cuff Bracelet',
@@ -585,7 +600,7 @@ let All_Products = [
     newPrice: 149.99,
   },
   {
-    id: 6,
+    id: 66,
     category: 'Bracelets',
     image: b6_img,
     name: 'Beaded Bracelet',
@@ -593,7 +608,7 @@ let All_Products = [
     newPrice: 79.99,
   },
   {
-    id: 7,
+    id: 67,
     category: 'Bracelets',
     image: b7_img,
     name: 'Pearl Bracelet',
@@ -601,7 +616,7 @@ let All_Products = [
     newPrice: 89.99,
   },
   {
-    id: 8,
+    id: 68,
     category: 'Bracelets',
     image: b8_img,
     name: 'Turquoise Stone Bracelet',
@@ -609,7 +624,7 @@ let All_Products = [
     newPrice: 109.99,
   },
   {
-    id: 9,
+    id: 69,
     category: 'Bracelets',
     image: b9_img,
     name: 'Charm Bracelet',
@@ -617,7 +632,7 @@ let All_Products = [
     newPrice: 129.99,
   },
   {
-    id: 10,
+    id: 70,
     category: 'Bracelets',
     image: b10_img,
     name: 'Swarovski Crystal Bracelet',
@@ -625,7 +640,7 @@ let All_Products = [
     newPrice: 159.99,
   },
   {
-    id: 11,
+    id: 71,
     category: 'Bracelets',
     image: b11_img,
     name: 'Lapis Lazuli Bracelet',
@@ -633,7 +648,7 @@ let All_Products = [
     newPrice: 89.99,
   },
   {
-    id: 12,
+    id: 72,
     category: 'Bracelets',
     image: b12_img,
     name: 'Citrine Gemstone Bracelet',
@@ -641,12 +656,124 @@ let All_Products = [
     newPrice: 149.99,
   },
   {
-    id: 13,
+    id: 73,
     category: 'Bracelets',
     image: b13_img,
     name: 'Amethyst Bracelet',
     oldPrice: 129.99,
     newPrice: 99.99,
+  },
+  {
+    id: 81,
+    image: p1_img,
+    name: 'Elegant Gold Necklace',
+    oldPrice: 199.99,
+    newPrice: 149.99,
+  },
+  {
+    id: 82,
+    image: p2_img,
+    name: 'Silver Stud Earrings',
+    oldPrice: 79.99,
+    newPrice: 59.99,
+  },
+  {
+    id: 83,
+    image: p3_img,
+    name: 'Diamond Ring',
+    oldPrice: 299.99,
+    newPrice: 249.99,
+  },
+  {
+    id: 84,
+    image: p4_img,
+    name: 'Pearl Bracelet',
+    oldPrice: 129.99,
+    newPrice: 99.99,
+  },
+  {
+    id: 85,
+    image: p5_img,
+    name: 'Ruby Pendant',
+    oldPrice: 179.99,
+    newPrice: 139.99,
+  },
+  {
+    id: 86,
+    image: p6_img,
+    name: 'Sapphire Stud Earrings',
+    oldPrice: 159.99,
+    newPrice: 119.99,
+  },
+  {
+    id: 87,
+    image: p7_img,
+    name: 'Emerald Necklace',
+    oldPrice: 229.99,
+    newPrice: 189.99,
+  },
+  {
+    id: 88,
+    image: p8_img,
+    name: 'Opal Ring',
+    oldPrice: 199.99,
+    newPrice: 159.99,
+  },
+  {
+    id: 91,
+    image: c1_img,
+    name: 'Platinum Band Ring',
+    oldPrice: 299.99,
+    newPrice: 249.99,
+  },
+  {
+    id: 92,
+    image: c2_img,
+    name: 'Rose Gold Bracelet',
+    oldPrice: 189.99,
+    newPrice: 159.99,
+  },
+  {
+    id: 93,
+    image: c3_img,
+    name: 'Amethyst Earrings',
+    oldPrice: 99.99,
+    newPrice: 79.99,
+  },
+  {
+    id: 94,
+    image: c4_img,
+    name: 'Turquoise Pendant',
+    oldPrice: 129.99,
+    newPrice: 109.99,
+  },
+  {
+    id: 95,
+    image: c5_img,
+    name: 'Topaz Necklace',
+    oldPrice: 229.99,
+    newPrice: 199.99,
+  },
+  {
+    id: 96,
+    image: c6_img,
+    name: 'Citrine Stud Earrings',
+    oldPrice: 149.99,
+    newPrice: 119.99,
+  },
+  {
+    id: 97,
+    image: c7_img,
+    name: 'Garnet Ring',
+    oldPrice: 199.99,
+    newPrice: 169.99,
+  },
+  {
+    id: 98,
+    image: c8_img,
+    name: 'Morganite Pendant',
+    oldPrice: 249.99,
+    newPrice: 209.99,
   },
 ];
 
