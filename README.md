@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# AuraLux Jewelry Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![AuraLux Logo](frontend/src/Assets/logo.svg)
 
-## Available Scripts
+AuraLux is a full-featured e-commerce platform specializing in jewelry. Built using the MERN stack (MongoDB, Express, React, Node.js), it offers an elegant, responsive interface for users to browse, filter, and purchase high-quality jewelry, including Rings, Necklaces, Earrings, Bracelets, and Packs.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User Authentication**: Sign up, login, and logout functionality using JWT for security.
+- **Product Categories**: Users can browse products by category (Rings, Necklaces, Earrings, etc.).
+- **Cart Management**: Users can add items to the cart and view the total number of items in the cart.
+- **Responsive Design**: The site is fully responsive, ensuring an optimal shopping experience on mobile, tablet, and desktop.
+- **Dynamic Filtering**: Category filtering allows users to browse products easily.
+- **Order Processing**: Basic checkout functionality (in progress).
+- **Admin Dashboard**: A secured area for admins to manage products and categories (in progress).
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (using Mongoose ORM)
+- **Authentication**: JSON Web Tokens (JWT)
+- **State Management**: React Context API
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get started with AuraLux, follow the steps below:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you have the following installed:
 
-### `npm run eject`
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/BKaoukine/AuraLux_store.git
+   cd AuraLux_store
+   ```
+2. Install dependencies for both frontend and backend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   # Install backend dependencies
+   cd backend
+   npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   # Install frontend dependencies
+   cd ../frontend
+   npm install
+   ```
 
-## Learn More
+3. Create a .env file in the backend directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_jwt_secret
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Run the development servers:
 
-### Code Splitting
+   ```bash
+    # Run the backend (in backend directory)
+    npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    # Run the frontend (in frontend directory)
+    npm start
+   ```
 
-### Analyzing the Bundle Size
+5. Open the app at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+Once the app is running locally, you can:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Browse products**: Navigate through different product categories using the navbar.
+- **Add items to the cart**: Select products and add them to the cart.
+- **User Authentication**: Sign up or log in to manage your account.
+- **Admin Features**: Manage product listings from a dashboard.
 
-### Advanced Configuration
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The following are the main API routes used by AuraLux:
 
-### Deployment
+**Authentication**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- POST /api/auth/signup: Register a new user
+- POST /api/auth/login: Authenticate and log in a user
+  **Products**
+- GET /api/products: Retrieve all products
+- GET /api/products/:id: Retrieve product by ID
+  **Cart (Context-Based)**
+- Add items to cart, manage items in cart, and view the number of items using the React Context API.
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add some feature`').
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new pull request.
+
+## License
+
+This project is part of the `ALX SE` program and was created for it. Feel free to use it for learning purposes.
