@@ -4,7 +4,7 @@ import funnel from "../Components/Assets/funnel.svg";
 import { Item } from "../Components/Items/Item";
 export const ShopCategory = (props) => {
 	let selected = props.category;
-	const { All_Products } = useContext(ShopContext);
+	const { all_product } = useContext(ShopContext);
 	return (
 		<>
 			<div className='my-20 ml-20 space-y-4 text-[#263238]'>
@@ -18,8 +18,8 @@ export const ShopCategory = (props) => {
 				<p>Sort By</p> <img className='w-6' src={funnel} alt='' />
 			</div>
 
-			<div className='pt-10 grid grid-cols-4 gap-6 mx-12'>
-				{All_Products.map((item, i) => {
+			<div className='pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-12'>
+				{all_product.map((item, i) => {
 					if (props.category === item.category) {
 						return (
 							<Item
@@ -27,8 +27,8 @@ export const ShopCategory = (props) => {
 								id={item.id}
 								name={item.name}
 								image={item.image}
-								old_price={item.oldPrice}
-								new_price={item.newPrice}
+								old_price={item.old_Price}
+								new_price={item.new_Price}
 							/>
 						);
 					} else {

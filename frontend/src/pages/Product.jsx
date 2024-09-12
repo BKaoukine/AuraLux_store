@@ -7,9 +7,9 @@ import { ProductDesc } from "../Components/ProductDesc/ProductDesc";
 import { RelatedProduct } from "../Components/RelatedProduct/RelatedProduct";
 
 export const Product = () => {
-	const { All_Products } = useContext(ShopContext);
+	const { all_product } = useContext(ShopContext);
 	const { productId } = useParams();
-	const product = All_Products.find((e) => e.id === Number(productId));
+	const product = all_product.find((e) => e.id === Number(productId));
 
 	return (
 		<>

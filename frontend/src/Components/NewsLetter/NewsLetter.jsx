@@ -2,19 +2,19 @@ import React from "react";
 
 export const NewsLetter = () => {
 	return (
-		<div className='w-[90%] flex flex-col bg-gradient-to-b from-sky-500 to-white m-[100px] justify-center items-center text-[#263238] space-y-10 p-20'>
-			<h1 className='text-6xl font-medium text-[#263238] uppercase'>
+		<div className='w-[90%] flex flex-col bg-gradient-to-b from-sky-500 to-white my-[100px] mx-auto justify-center items-center text-[#263238] text-center space-y-4 lg:space-y-10 p-10 lg:p-20'>
+			<h1 className='text-lg md:text-4xl lg:text-6xl font-medium text-[#263238] uppercase'>
 				Get Execlusive offers on your Email
 			</h1>
-			<p className='uppercase font-bold text-2xl'>
+			<p className='uppercase font-bold text-sm md:text-md lg:text-2xl'>
 				Subscribe to our NewsLetter and stay updated
 			</p>
 
-			<div className='flex flex-row'>
+			<div className='flex lg:flex-row'>
 				<input
 					type='email'
 					id='email'
-					class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-0.5 pl-4 mb-2 me-2 w-80 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+					className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-0.5 pl-4 mb-2 me-2 w-60 md:w-80 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 					placeholder='john.doe@company.com'
 					required
 				/>

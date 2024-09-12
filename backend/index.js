@@ -129,6 +129,145 @@ app.get("/all_products", async (req, resp) => {
 	resp.send(all_products);
 });
 
+// User Model Shema
+
+const Users = mongoose.model("Users", {
+	name: {
+		type: String,
+	},
+	email: {
+		type: String,
+		unique: true,
+	},
+	password: {
+		type: String,
+	},
+	cartData: {
+		type: Object,
+	},
+	date: {
+		type: Date,
+		default: Date.now,
+	},
+});
+
+// User Registration EndPoint
+app.post("/signup", async (req, resp) => {
+	let check = await Users.findOne({ email: req.body.email });
+	if (check) {
+		return resp.status(400).json({
+			success: false,
+			errors: "existing user found with same email adress",
+		});
+	}
+	let cart = {};
+	for (let i = 0; i < 300; i++) {
+		cart[i] = 0;
+	}
+	const user = new Users({
+		name: req.body.name,
+		email: req.body.email,
+		password: req.body.password,
+		cartData: cart,
+	});
+
+	await user.save();
+
+	const data = {
+		user: {
+			id: user.id,
+		},
+	};
+
+	const token = jwt.sign(data, "secret_ecom");
+	resp.json({ success: true, token });
+});
+
+//User loging EndPoint
+
+app.post("/login", async (req, resp) => {
+	let user = await Users.findOne({ email: req.body.email });
+	if (user) {
+		const passCompare = req.body.password === user.password;
+		if (passCompare) {
+			const data = {
+				user: {
+					id: user.id,
+				},
+			};
+			const token = jwt.sign(data, "secret_ecom");
+			resp.json({ success: true, token });
+		} else {
+			resp.json({ success: false, errors: "Wrong Password, Please Try again" });
+		}
+	} else {
+		resp.json({ success: false, errors: "Wrong Email Id" });
+	}
+});
+
+// New Collection EndPoint
+
+app.get("/newcollecions", async (req, resp) => {
+	let products = await Product.find({});
+	let newcollection = products.slice(0).slice(-8);
+	console.log("NewCollections Fetched");
+	resp.send(newcollection);
+});
+
+// Popular EndPoint
+app.get("/popular", async (req, resp) => {
+	let products = await Product.find({});
+	let popular = products.slice(6, 13);
+	console.log("Popular Fetched");
+	resp.send(popular);
+});
+
+// Fetch user
+const fetchUser = async (req, resp, next) => {
+	const token = req.header("auth-token");
+	if (!token) {
+		resp.status(401).send({ errors: "Authentication Failed!" });
+	} else {
+		try {
+			const data = jwt.verify(token, "secret_ecom");
+			req.user = data.user;
+			next();
+		} catch (error) {
+			resp
+				.status(401)
+				.send({ errors: "Please Authenticate using another token" });
+		}
+	}
+};
+
+// Cart Data EndPoint
+
+app.post("/addtocart", fetchUser, async (req, resp) => {
+	let userData = await Users.findOne({ _id: req.user.id });
+	userData.cartData[req.body.itemId] += 1;
+	await Users.findOneAndUpdate(
+		{ _id: req.user.id },
+		{ cartData: userData.cartData }
+	);
+	resp.send("Added");
+	console.log(req.user.id);
+});
+app.post("/removefromcart", fetchUser, async (req, resp) => {
+	let userData = await Users.findOne({ _id: req.user.id });
+	if (userData.cartData[req.body.itemId] > 0)
+		userData.cartData[req.body.itemId] -= 1;
+	await Users.findOneAndUpdate(
+		{ _id: req.user.id },
+		{ cartData: userData.cartData }
+	);
+	resp.send("Removed");
+	console.log(req.user.id);
+});
+
+app.post("/getcart", fetchUser, async (req, resp) => {
+	let userData = await Users.findOne({ _id: req.user.id });
+	resp.json(userData.cartData);
+});
 app.listen(port, (error) => {
 	if (!error) {
 		console.log("Server running on " + port);

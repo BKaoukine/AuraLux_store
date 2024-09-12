@@ -9,7 +9,7 @@ export const RelatedProduct = () => {
 			</h1>
 			<hr className='w-40 h-2 bg-[#263238]' />
 
-			<div className='pt-10 grid grid-cols-4 gap-6'>
+			<div className='pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 				{newCollections.map((item, i) => {
 					return (
 						<Item
