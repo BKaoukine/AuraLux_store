@@ -15,7 +15,7 @@ require("dotenv").config();
 
 // Database Connection
 mongoose.connect(
-	"mongodb+srv://auraluxdev:478818@cluster0.1hdcj.mongodb.net/auralux"
+	"mongodb+srv://auraluxdev:478818@cluster0.1hdcj.mongodb.net/auralux?retryWrites=true&w=majority&appName=Cluster0"
 );
 
 // Storage Engine Initialisation
