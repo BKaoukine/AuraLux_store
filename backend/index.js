@@ -13,19 +13,20 @@ app.use(express.json());
 app.use(cors());
 require("dotenv").config();
 
-// Database Connection
 const connectdb = async () => {
 	try {
 		await mongoose.connect(
-			mongoose.connect(
-				"mongodb+srv://auraluxdev:478818@cluster0.1hdcj.mongodb.net/auralux?retryWrites=true&w=majority&appName=Cluster0"
-			)
+			"mongodb+srv://auraluxdev:478818@cluster0.1hdcj.mongodb.net/auralux?retryWrites=true&w=majority&appName=Cluster0"
 		);
 		console.log("Database Connected");
 	} catch (error) {
 		console.log(error);
 	}
 };
+
+//Database Connection
+
+connectdb();
 // Storage Engine Initialisation
 const storage = multer.diskStorage({
 	destination: "./upload/images",
