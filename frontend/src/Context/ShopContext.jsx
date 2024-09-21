@@ -15,11 +15,11 @@ const ShopContextProvider = (props) => {
 	const [all_product, setAll_Product] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:4000/all_products")
+		fetch("https://auralux-store.onrender.com/all_products")
 			.then((response) => response.json())
 			.then((data) => setAll_Product(data));
 		if (localStorage.getItem("auth-token")) {
-			fetch("http://localhost:4000/getcart", {
+			fetch("https://auralux-store.onrender.com/getcart", {
 				method: "POST",
 				headers: {
 					Accept: "application/form-data",
@@ -38,7 +38,7 @@ const ShopContextProvider = (props) => {
 	const addToCart = (itemId) => {
 		setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
 		if (localStorage.getItem("auth-token")) {
-			fetch("http://localhost:4000/addtocart", {
+			fetch("https://auralux-store.onrender.com/addtocart", {
 				method: "POST",
 				headers: {
 					accept: "application/form-data",
@@ -54,7 +54,7 @@ const ShopContextProvider = (props) => {
 	const removeFromCart = (itemId) => {
 		setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
 		if (localStorage.getItem("auth-token")) {
-			fetch("http://localhost:4000/removefromcart", {
+			fetch("https://auralux-store.onrender.com/removefromcart", {
 				method: "POST",
 				headers: {
 					accept: "application/form-data",

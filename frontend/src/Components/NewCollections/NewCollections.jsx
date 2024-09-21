@@ -5,7 +5,7 @@ export const NewCollections = () => {
 	const [newcollections, setNewCollections] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:4000/newcollections")
+		fetch("https://auralux-store.onrender.com//newcollections")
 			.then((response) => response.json())
 			.then((data) => setNewCollections(data));
 	}, []);

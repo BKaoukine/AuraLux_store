@@ -4,7 +4,7 @@ export const Popular = () => {
 	const [popular, setPopular] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:4000/popular")
+		fetch("https://auralux-store.onrender.com/popular")
 			.then((response) => response.json())
 			.then((data) => setPopular(data));
 	}, []);

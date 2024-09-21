@@ -4,7 +4,7 @@ const ListProducts = () => {
 	const [allproduct, setAllProducts] = useState([]);
 
 	const fetchInfo = async () => {
-		await fetch("http://localhost:4000/all_products")
+		await fetch("https://auralux-store.onrender.com/all_products")
 			.then((resp) => resp.json())
 			.then((data) => {
 				setAllProducts(data);
@@ -16,7 +16,7 @@ const ListProducts = () => {
 	}, []);
 
 	const removeProduct = async (id) => {
-		await fetch("http://localhost:4000/remove_product", {
+		await fetch("https://auralux-store.onrender.com/remove_product", {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
