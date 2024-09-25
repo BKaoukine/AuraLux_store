@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 export const Item = (props) => {
 	return (
-		<div className='flex flex-col w-full gap-2 p-2 border-2 transition ease-in-out delay-150 hover:scale-105'>
+		<motion.div
+			className='flex flex-col w-full gap-2 p-2 border-2 transition ease-in-out delay-150 hover:scale-105'
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1, transition: { delay: 0.3, duration: 1 } }}>
 			<Link to={`/product/${props.id}`}>
 				<img
 					className='w-full h-96'
@@ -22,6 +26,6 @@ export const Item = (props) => {
 					<li className='text-[#263238] font-black'>${props.new_price}</li>
 				</ul>
 			</div>
-		</div>
+		</motion.div>
 	);
 };

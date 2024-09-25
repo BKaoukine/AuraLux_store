@@ -2,11 +2,18 @@ import React, { useContext } from "react";
 import star_fill from "../Assets/star-fill.svg";
 import star_light from "../Assets/star-light.svg";
 import { ShopContext } from "../../Context/ShopContext";
+import { motion } from "framer-motion";
 export const ProductDisplay = (props) => {
 	const { product } = props;
 	const { addToCart } = useContext(ShopContext);
 	return (
-		<div className='w-full lg:w-[80%] flex flex-col md:flex-row mx-auto my-[5%] text-[#263238] justify-center'>
+		<motion.div
+			className='w-full lg:w-[80%] flex flex-col md:flex-row mx-auto my-[5%] text-[#263238] justify-center'
+			initial={{ opacity: 0 }}
+			animate={{
+				opacity: 1,
+				transition: { delay: 0.6, duration: 1.2, ease: "backInOut" },
+			}}>
 			{/* Product images */}
 			<div className='w-full md:w-1/2 md:mx-4 flex flex-col-reverse md:flex-col lg:flex-row gap-y-4 lg:gap-x-4'>
 				<div className='w-[90%] mx-auto md:mx-0  md:w-[18%] flex flex-row gap-x-5 lg:flex-col lg:gap-y-5'>
@@ -41,26 +48,24 @@ export const ProductDisplay = (props) => {
 				<div className='flex flex-col mt-6 gap-y-6'>
 					<h1 className='text-gray-400 font-medium'>Select Size</h1>
 					<div className='flex flex-row gap-x-4'>
-						<button className='w-[60px] bg-slate-100 font-light p-4 border-[1px] border-gray-200'>
-							S
-						</button>
-						<button className='w-[60px] bg-slate-100 font-light p-4 border-[1px] border-gray-200'>
-							M
-						</button>
-						<button className='w-[60px] bg-slate-100 font-light p-4 border-[1px] border-gray-200'>
-							L
-						</button>
-						<button className='w-[60px] bg-slate-100 font-light p-4 border-[1px] border-gray-200'>
-							XL
-						</button>
+						{["S", "M", "L", "XL"].map((size) => (
+							<motion.button
+								key={size}
+								className='w-[60px] bg-slate-100 font-light p-4 border-[1px] border-gray-200'
+								whileHover={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.6)" }}
+								transition={{ duration: 0.4 }}>
+								{size}
+							</motion.button>
+						))}
 					</div>
-					<button
-						onClick={() => {
-							addToCart(product.id);
-						}}
-						className='uppercase bg-red-500 px-8 py-4 w-[180px] text-white font-medium'>
+
+					<motion.button
+						onClick={() => addToCart(product.id)}
+						className='uppercase bg-red-500 px-8 py-4 w-[180px] text-white font-medium'
+						whileHover={{ boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.6)" }}
+						transition={{ duration: 0.4 }}>
 						Add To Cart
-					</button>
+					</motion.button>
 				</div>
 
 				<div className='flex flex-col gap-y-6 mt-6'>
@@ -72,6 +77,6 @@ export const ProductDisplay = (props) => {
 					</h2>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };

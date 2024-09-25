@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export const LoginSignup = () => {
+	const [isVisible, setIsVisible] = useState(false);
 	const [state, setState] = useState("login");
 	const [formData, setFormData] = useState({
 		username: "",
@@ -61,7 +63,14 @@ export const LoginSignup = () => {
 		}
 	};
 	return (
-		<div className='flex flex-col items-center py-10 px-5 border-t-2 border-x-2 border-dotted mx-auto my-[15vh]  border-gray-400 w-[500px] gap-y-4'>
+		<motion.div
+			className='flex flex-col items-center py-10 px-5 border-t-2 border-x-2 border-dotted mx-auto my-[15vh]  border-gray-400 w-[500px] gap-y-4'
+			initial={{ opacity: 1, scale: 1 }}
+			animate={{
+				opacity: isVisible ? [0, 1] : 1,
+				scale: isVisible ? [0.8, 1] : 1,
+				transition: { duration: 2, ease: "easeInOut", type: "spring" },
+			}}>
 			<h1 className='font-light text-xl text-black'>
 				{state} to <span className='uppercase font-semibold'>auralux</span>{" "}
 				{state === "sign up" && "for free"}
@@ -73,6 +82,10 @@ export const LoginSignup = () => {
 						<button
 							onClick={() => {
 								state === "login" ? setState("sign up") : setState("login");
+								setIsVisible(true);
+								setTimeout(() => {
+									setIsVisible(false);
+								}, 1000);
 							}}
 							className='text-blue-600'>
 							Sign in
@@ -130,6 +143,10 @@ export const LoginSignup = () => {
 						<button
 							onClick={() => {
 								state === "login" ? setState("sign up") : setState("login");
+								setIsVisible(true);
+								setTimeout(() => {
+									setIsVisible(false);
+								}, 1000);
 							}}
 							className='text-blue-600'>
 							Create one
@@ -137,6 +154,6 @@ export const LoginSignup = () => {
 					</h2>
 				</div>
 			)}
-		</div>
+		</motion.div>
 	);
 };
